@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Content from './Component/Content/Content';
+import Header from './Component/Header/Header';
+import { useState } from 'react';
 
 function App() {
+  const [users, setUsers] = useState(() => JSON.parse(localStorage.getItem("listUsers")) || []);
+
+  const handleAddUser = (newUser) => {
+    const addUser = [...users, newUser];
+    setUsers(addUser);
+    localStorage.setItem(("listUsers"), JSON.stringify(addUser));
+  };
+
+  const handleDelete = (id) => {
+    const updatedUsers = users.filter((item) => item.id !== id);
+    setUsers(updatedUsers);
+    localStorage.setItem(("listUsers"), JSON.stringify(updatedUsers));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header handleAddUser={handleAddUser}></Header>
+      <Content users={users} handleDelete={handleDelete} setUsers={setUsers}></Content>
     </div>
   );
 }

@@ -1,0 +1,56 @@
+.content__container {
+    width: 800px;
+    height: auto;
+    border: 1px solid black;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.td_1 {
+    width: 10%;
+
+}
+
+.td_2 {
+    width: 20%;
+}
+
+.td_3 {
+    width: 15%;
+}
+
+.td_4 {
+    width: 20%;
+}
+
+.td_5 {
+    width: 20%;
+}
+
+.td_6 {
+    width: 15%;
+}
+
+tr,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+
+td>button {
+    margin: 4px;
+}
+
+tbody tr {
+
+    height: 50px;
+}

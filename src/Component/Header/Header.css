@@ -1,0 +1,41 @@
+.header__container {
+    display: flex;
+    border: 1px solid black;
+    width: 800px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 20px;
+}
+
+.header__item__one,
+.header__item__two,
+.header__item__three,
+.header__item__four,
+.header__item__five {
+    margin: 0 8px;
+    display: flex;
+}
+
+.message {
+    width: 800px;
+    height: auto;
+    text-align: center;
+}
+
+.error-message {
+    color: red;
+    background-color: yellow;
+
+}
+
+.header__container span {
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(192, 199, 199);
+}
